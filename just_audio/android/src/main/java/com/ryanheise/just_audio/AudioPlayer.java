@@ -366,6 +366,7 @@ public class AudioPlayer implements MethodCallHandler, Player.Listener, Metadata
             switch (exoError.type) {
             case ExoPlaybackException.TYPE_SOURCE:
                 Log.e(TAG, "TYPE_SOURCE: " + exoError.getSourceException().getMessage());
+                player.play();
                 break;
 
             case ExoPlaybackException.TYPE_RENDERER:
